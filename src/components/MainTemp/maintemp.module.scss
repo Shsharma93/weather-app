@@ -1,0 +1,15 @@
+.main {
+  text-align: center;
+  font-size: 3rem;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .main {
+    font-size: 2.5rem;
+    height: 7.5%;
+  }
+}

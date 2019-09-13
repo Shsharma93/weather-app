@@ -1,0 +1,16 @@
+.title {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  height: 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+    height: 6%;
+  }
+}
