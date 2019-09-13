@@ -21,25 +21,26 @@ class Wrapper extends React.Component {
   };
 
   componentDidMount() {
-    const data = this.state.cities.map(city => {
+    const cities = [...this.state.cities];
+    cities.forEach(city => {
       axios
         .get(
-          `http://api.weatherbit.io/v2.0/forecast/daily?lat=${city.lat}&lon=${city.lon}&key=fe1108eec4684d488029f25744d4ef03`
+          `https://api.weatherbit.io/v2.0/forecast/daily?lat=${city.lat}&lon=${city.lon}&key=fe1108eec4684d488029f25744d4ef03`
         )
         .then(result => {
-          city.data = result.data.data.slice(0, 6);
+          let cities = [...this.state.cities];
+          const index = cities.findIndex(el => el.name === city.name);
+          cities[index].data = result.data.data.slice(0, 6);
+          this.setState({ cities });
         })
         .catch(err => console.log(err.message));
-      return city;
+      return;
     });
-
-    this.setState({ cities: data });
   }
 
   handleNext = () => {
     const { index, cities } = this.state;
     this.setState({ index: index === cities.length - 1 ? 0 : index + 1 });
-    console.log(cities);
   };
 
   handlePrev = () => {
