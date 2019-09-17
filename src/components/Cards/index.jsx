@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from './cards.module.scss';
-import Card from './Card/Card';
-import checkWeather from '../../functions/checkWeather';
+import classes from './style.module.scss';
+import Card from './Card';
+import checkWeather from '../../checkWeather';
 
 const Cards = ({ data }) => {
   return (

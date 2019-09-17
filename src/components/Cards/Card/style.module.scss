@@ -1,0 +1,41 @@
+.card {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #ddd;
+  font-size: 1rem;
+  .day {
+    height: 15%;
+    margin: 15% 0 10%;
+  }
+  .icon {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50%;
+    }
+  }
+  .temp {
+    margin: 10% 0;
+    height: 15% 0 0;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .card {
+    width: 30%;
+    height: 45%;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .card {
+    font-size: 0.8rem;
+  }
+}

@@ -10,9 +10,15 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
   .wrapper {
     font-size: 1.2rem;
     height: 6%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .wrapper {
+    font-size: 1rem;
   }
 }

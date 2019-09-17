@@ -1,6 +1,5 @@
 import React from 'react';
-import classes from './card.module.scss';
-import img from '../../../images/sunny.png';
+import classes from './style.module.scss';
 
 const Card = ({ min, max, datetime, icon }) => {
   const getDay = datetime => {
@@ -26,9 +25,13 @@ const Card = ({ min, max, datetime, icon }) => {
 
   return (
     <div className={classes.card}>
-      <div>{getDay(datetime)}</div>
-      <img src={icon} alt='weather' />
-      <div>{min} / {max}</div>
+      <div className={classes.day}>{getDay(datetime)}</div>
+      <div className={classes.icon}>
+        <img src={icon} alt='weather' />
+      </div>
+      <div className={classes.temp}>
+        {Math.round(min)} / {Math.round(max)}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-const checkWeather = data => {
+const getWeather = data => {
   if (data.weather.icon === 'c01d') return 'https://bit.ly/webApp_Assets_sunny';
   if (data.weather.icon.charAt(0) === 'c')
     return 'https://bit.ly/webApp_Assets_cloudy';
@@ -11,4 +11,4 @@ const checkWeather = data => {
   else return 'https://bit.ly/webApp_Assets_sunny';
 };
 
-export default checkWeather;
+export default getWeather;
